@@ -1,7 +1,9 @@
 # cicd-includes
-CI/CD includes to be used by other projects. This project is holding the common test, linter etc jobs.
+CI/CD includes to be used by other projects. This project is holding the common test, linter etc jobs. 
 
-sample example on how to call this reuable workflow in given repository : 
+Currently, it supports golang test and lint.
+
+sample example on how to call this reusable workflow in given repository : 
 
 ```yml
 name: golang lint and test
