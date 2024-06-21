@@ -1,2 +1,30 @@
 # cicd-includes
 CI/CD includes to be used by other projects. This project is holding the common test, linter etc jobs.
+
+sample example on how to call this reuable workflow in given repository : 
+
+```yml
+name: golang lint and test
+
+on:
+  push:
+    branches:
+      - master
+      - main
+  pull_request:
+    branches:
+      - master
+      - main
+
+permissions:
+  contents: read
+  # Optional: allow read access to pull request. Use with `only-new-issues` option.
+  # pull-requests: read
+
+jobs:
+  Lint-App:
+    uses: WheeskyJack/cicd-includes/.github/workflows/golangci-lint.yml@v1.0.0
+  Test-App:
+    uses: WheeskyJack/cicd-includes/.github/workflows/go_test.yml@v1.0.0
+
+```
