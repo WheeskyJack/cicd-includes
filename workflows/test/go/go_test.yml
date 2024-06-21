@@ -4,10 +4,7 @@
 name: Go-Test
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
 
 jobs:
 
@@ -25,5 +22,5 @@ jobs:
     - name: Install dependencies
       run: go mod vendor
         
-    - name: Test
+    - name: Run-Test
       run: go test -v -race ./...
