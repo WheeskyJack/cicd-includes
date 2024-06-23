@@ -3,7 +3,9 @@ CI/CD includes to be used by other projects. This project is holding the common 
 
 Currently, it supports golang test and lint.
 
-sample example on how to call this reusable workflow in given repository : 
+sample example on how to call this reusable workflow in your repository : 
+
+you can add similar yml as show below in your repository's .github/workflows directory.
 
 ```yml
 name: golang lint and test
