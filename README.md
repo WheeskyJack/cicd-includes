@@ -3,6 +3,7 @@ CI/CD includes to be used by other projects. This project is holding the common 
 
 Currently, it supports golang test and lint.
 
+## Usage
 sample example on how to call this reusable workflow in your repository : 
 
 you can add similar yml as shown below in your repository's .github/workflows directory.
@@ -32,3 +33,10 @@ jobs:
     uses: WheeskyJack/cicd-includes/.github/workflows/go_test.yml@v1.0.0
 
 ```
+
+## Contributing
+Contributions are welcome! Please feel free to create an issue and submit a pull request.
+
+## License
+
+This project is licensed under the <a href="https://github.com/WheeskyJack/cicd-includes/blob/main/LICENSE">MIT License</a> - see the LICENSE file for details.
