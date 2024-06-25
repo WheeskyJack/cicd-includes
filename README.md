@@ -28,9 +28,9 @@ permissions:
 
 jobs:
   Lint-App:
-    uses: WheeskyJack/cicd-includes/.github/workflows/golangci-lint.yml@v1.0.0
+    uses: WheeskyJack/cicd-includes/.github/workflows/golangci-lint.yml@v1.1.0
   Test-App:
-    uses: WheeskyJack/cicd-includes/.github/workflows/go_test.yml@v1.0.0
+    uses: WheeskyJack/cicd-includes/.github/workflows/go_test.yml@v1.1.0
 
 ```
 
