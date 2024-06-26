@@ -1,0 +1,25 @@
+name: grype-vulnerability-scanner
+
+on:
+  workflow_call:
+
+jobs:
+  scan-source:
+    name: scan-source
+    runs-on: ubuntu-latest
+
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run grype vulnerability scanner
+        uses: anchore/scan-action@v3
+        with:
+          path: "."
+          fail-build: true
+          severity-cutoff: critical
